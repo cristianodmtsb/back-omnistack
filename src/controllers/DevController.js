@@ -24,7 +24,7 @@ module.exports = {
     const userExists = await Dev.findOne({ user: username });
 
     if (userExists) {
-      return res.json();
+      return res.json(userExists);
     }
 
     const response = await axios.get(
